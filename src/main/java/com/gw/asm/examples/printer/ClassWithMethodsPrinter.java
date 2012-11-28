@@ -21,7 +21,7 @@ public class ClassWithMethodsPrinter extends ClassVisitor {
 
 	@Override
 	public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
-		sb.append("Method: " + name + "desc");
+		sb.append("Method: " + name + desc);
 
 		return super.visitMethod(access, name, desc, signature, exceptions);
 	}
