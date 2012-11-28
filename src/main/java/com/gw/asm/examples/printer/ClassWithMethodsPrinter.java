@@ -14,15 +14,14 @@ public class ClassWithMethodsPrinter extends ClassVisitor {
 
 	@Override
 	public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
-		sb.append("Class: " + name);
+		sb.append("Class: ").append(name).append("\n");
 
 		super.visit(version, access, name, signature, superName, interfaces);
 	}
 
 	@Override
 	public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
-		sb.append("Method: " + name + desc);
-
+		sb.append("Method: ").append(name).append(desc).append("\n");
 		return super.visitMethod(access, name, desc, signature, exceptions);
 	}
 
